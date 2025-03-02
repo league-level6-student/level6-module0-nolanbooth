@@ -22,11 +22,12 @@ This API was created by the Cheetah class at the League of Amazing Programmers, 
 
 public class CheetahSearchApi {
 
-    private static final String baseUrl = "https://cheetah.api.jointheleague.org/searchLocResults";
-
+    private static final String baseUrl = "https://cheetah.jointheleague.org/searchLocResults";
+    //actual link doesn't include the .api
     //We will use WebClient to make the request
+    
+    
     private WebClient webClient;
-
     public CheetahSearchApi() {
         //build the WebClient
         this.webClient = WebClient
@@ -39,12 +40,14 @@ public class CheetahSearchApi {
     public void testRequest() {
 
         /*
-        The following code makes the request and receives the response from cheetah.api.jointheleague.org.
+        The following code makes the request and receives the response from cheetah.jointheleague.org.
         In this scenario the .uri() method is is used to add our search term as a URL parameter
         at the end of the previously specified base url from the constructor.
         This uri is where are making our GET request the resulting uri would look like:
         https://cheetah.api.jointheleague.org/searchLocResults?q=java
         */
+    	
+    	
         Mono<String> stringMono = webClient
         		.get()
                 .uri(uriBuilder -> uriBuilder
