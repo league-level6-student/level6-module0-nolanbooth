@@ -1,6 +1,6 @@
 package _02_cat_facts_API;
 
-import _02_cat_facts_API.data_transfer_objects.CatWrapper;
+import _02_cat_facts_API.data_transfer_objects.CatFactsData;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -44,8 +44,17 @@ public class CatFactsApi {
         this is what you will input into jsonschema2pojo.com
          */
 
+    	Mono<String> monoString = webClient.get()
 
-        /*
+    	
+    			.retrieve()
+    			.bodyToMono(String.class);
+      
+    	 String response = monoString.block();
+
+         System.out.println("repsonse: " +response );
+    	
+    	/*
         Use http://www.jsonschema2pojo.org/ to generate your POJO
         and place it in the cat_facts_API.data_transfer_objects package.
         Select:
@@ -54,6 +63,10 @@ public class CatFactsApi {
         Source Type = JSON
         Annotation Style = Gson
         */
+         
+         
+         
+         
     }
 
     public String getCatFact() {
@@ -64,7 +77,13 @@ public class CatFactsApi {
         //Use block() to collect the response into a java object using the class you just created
 
         //return the Object
-        return null;
+    	
+    	Mono<CatFactsData> thing = webClient.get().retrieve().bodyToMono(CatFactsData.class);
+    	
+    	
+    	
+    	
+        return thing.block().toString();
 
 
     }
@@ -73,7 +92,12 @@ public class CatFactsApi {
         //use the getCatFact method to retrieve a cat fact
 
         //return the first (and only) String in the Arraylist of data in the response
-        return null;
+    
+    		
+    		
+    	
+    	
+        return getCatFact();
     }
 
     public void setWebClient(WebClient webClient) {

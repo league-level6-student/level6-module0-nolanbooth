@@ -14,7 +14,7 @@ that allow us to GET information, but some APIs also allow users to change the d
 by that service.
 
 The documentation for the Cheetah Search API can be found here:
-https://cheetah.api.jointheleague.org
+https://cheetah.jointheleague.org
 
 This API was created by the Cheetah class at the League of Amazing Programmers, for their level 7 project.
  */
