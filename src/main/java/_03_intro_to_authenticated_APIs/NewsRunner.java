@@ -8,8 +8,10 @@ public class NewsRunner {
         NewsApi newsApi = new NewsApi();
         //newsApi.testRequest();
         String topic = JOptionPane.showInputDialog("Please enter a topic for a news story");
-        String story = newsApi.findStory(topic);
-        System.out.println(story);
+       // String story = newsApi.findStory(topic);
+       newsApi.testRequest();
+        
+        //System.out.println(story);
     }
 
 }
