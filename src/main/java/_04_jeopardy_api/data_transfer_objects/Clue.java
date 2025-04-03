@@ -1,130 +1,99 @@
 package _04_jeopardy_api.data_transfer_objects;
 
+import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+@Generated("jsonschema2pojo")
 public class Clue {
 
-    @SerializedName("id")
-    @Expose
-    private Integer id;
-    @SerializedName("answer")
-    @Expose
-    private String answer;
-    @SerializedName("question")
-    @Expose
-    private String question;
-    @SerializedName("value")
-    @Expose
-    private Integer value;
-    @SerializedName("airdate")
-    @Expose
-    private String airdate;
-    @SerializedName("created_at")
-    @Expose
-    private String createdAt;
-    @SerializedName("updated_at")
-    @Expose
-    private String updatedAt;
-    @SerializedName("category_id")
-    @Expose
-    private Integer categoryId;
-    @SerializedName("game_id")
-    @Expose
-    private Object gameId;
-    @SerializedName("invalid_count")
-    @Expose
-    private Object invalidCount;
-    @SerializedName("category")
-    @Expose
-    private Category category;
+@SerializedName("id")
+@Expose
+private Integer id;
+@SerializedName("game_id")
+@Expose
+private Integer gameId;
+@SerializedName("value")
+@Expose
+private Integer value;
+@SerializedName("daily_double")
+@Expose
+private Boolean dailyDouble;
+@SerializedName("round")
+@Expose
+private String round;
+@SerializedName("category")
+@Expose
+private String category;
+@SerializedName("clue")
+@Expose
+private String clue;
+@SerializedName("response")
+@Expose
+private String response;
 
-    public Integer getId() {
-        return id;
-    }
+public Integer getId() {
+return id;
+}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+public void setId(Integer id) {
+this.id = id;
+}
 
-    public String getAnswer() {
-        return answer;
-    }
+public Integer getGameId() {
+return gameId;
+}
 
-    public void setAnswer(String answer) {
-        this.answer = answer;
-    }
+public void setGameId(Integer gameId) {
+this.gameId = gameId;
+}
 
-    public String getQuestion() {
-        return question;
-    }
+public Integer getValue() {
+return value;
+}
 
-    public void setQuestion(String question) {
-        this.question = question;
-    }
+public void setValue(Integer value) {
+this.value = value;
+}
 
-    public Integer getValue() {
-        return value;
-    }
+public Boolean getDailyDouble() {
+return dailyDouble;
+}
 
-    public void setValue(Integer value) {
-        this.value = value;
-    }
+public void setDailyDouble(Boolean dailyDouble) {
+this.dailyDouble = dailyDouble;
+}
 
-    public String getAirdate() {
-        return airdate;
-    }
+public String getRound() {
+return round;
+}
 
-    public void setAirdate(String airdate) {
-        this.airdate = airdate;
-    }
+public void setRound(String round) {
+this.round = round;
+}
 
-    public String getCreatedAt() {
-        return createdAt;
-    }
+public String getCategory() {
+return category;
+}
 
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
+public void setCategory(String category) {
+this.category = category;
+}
 
-    public String getUpdatedAt() {
-        return updatedAt;
-    }
+public String getClue() {
+return clue;
+}
 
-    public void setUpdatedAt(String updatedAt) {
-        this.updatedAt = updatedAt;
-    }
+public void setClue(String clue) {
+this.clue = clue;
+}
 
-    public Integer getCategoryId() {
-        return categoryId;
-    }
+public String getResponse() {
+return response;
+}
 
-    public void setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
-    }
-
-    public Object getGameId() {
-        return gameId;
-    }
-
-    public void setGameId(Object gameId) {
-        this.gameId = gameId;
-    }
-
-    public Object getInvalidCount() {
-        return invalidCount;
-    }
-
-    public void setInvalidCount(Object invalidCount) {
-        this.invalidCount = invalidCount;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
+public void setResponse(String response) {
+this.response = response;
+}
 
 }

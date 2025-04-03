@@ -19,7 +19,7 @@ public class JeopardyApi {
 
     private final WebClient webClient;
 
-    private static final String baseUrl = "http://jservice.io/api/clues";
+    private static final String baseUrl = "http://cluebase.lukelav.in/clues";
 
     public JeopardyApi() {
         webClient = WebClient
@@ -40,20 +40,25 @@ public class JeopardyApi {
         //with the specified point value.
         //
         //Make sure to save the response as type Clue[].class in the bodyToMono() method call
-    	Mono<String> monoString = webClient.get().uri(uriBuilder -> uriBuilder.queryParam(baseUrl,value).build()).retrieve().bodyToMono(String.class);
+    	Mono<Clue[]> monoString = webClient.get().uri(uriBuilder -> uriBuilder.queryParam(baseUrl,value).build()).retrieve().bodyToMono(Clue[].class);
+    	
+    	
     	
     					
-    	
-    					
-    	
+    	Clue[] array = monoString.block();
     	
     	
         //2
         //Get a random number less than the size of the Clue array
-
+    	int random = new Random().nextInt(array.length);
+    	
+    	
+    	
         //3
         //return the clue at the random index you just created
-
-        return null;
+    	
+    	
+    	
+        return array[random];
     }
 }
