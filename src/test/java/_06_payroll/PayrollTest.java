@@ -42,10 +42,16 @@ class PayrollTest {
     @Test
     void itShouldCreateOfferLetter() {
         //given
+    	String employeeName = "noah";
+    	double hourlyWage = 1.75;
+    	
+    	String expected = "Hello " + employeeName + ", We are pleased to offer you an hourly wage of " + hourlyWage;
     	
         //when
-
+    	String actual = payroll.createOfferLetter(employeeName, hourlyWage);
         //then
+    	assertEquals(expected, actual);
+    	
     }
 
 }
