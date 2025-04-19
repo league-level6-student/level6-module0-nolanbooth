@@ -28,3 +28,4 @@ Before moving on to the next section, please familiarize yourself with the follo
 src/main/java/_07_intro_to_mocking/models/Car.java
 src/test/java/_07_intro_to_mocking/models/CarTest.java
 
+Completed
